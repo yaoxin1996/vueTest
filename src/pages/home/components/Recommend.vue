@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-          <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+          <li class="item border-bottom" v-for="item in list" :key="item.id">
             <img class="item-img" :src="item.imgUrl">
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -16,25 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1410/23/5d1adb9e59bac7ff3340b70d3ba71f9a.jpg_200x200_5d3fa3e9.jpg',
-        title: '阿尔卡迪亚御临泉温泉',
-        desc: '让每一位前来的消费者感到《家》的氛围'
-      }, {
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1410/23/5d1adb9e59bac7ff3340b70d3ba71f9a.jpg_200x200_5d3fa3e9.jpg',
-        title: '阿尔卡迪亚御临泉温泉',
-        desc: '让每一位前来的消费者感到《家》的氛围'
-      }, {
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1410/23/5d1adb9e59bac7ff3340b70d3ba71f9a.jpg_200x200_5d3fa3e9.jpg',
-        title: '阿尔卡迪亚御临泉温泉',
-        desc: '让每一位前来的消费者感到《家》的氛围'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
